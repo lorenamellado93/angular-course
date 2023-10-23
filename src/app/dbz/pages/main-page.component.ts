@@ -17,6 +17,16 @@ export class MainPageComponent {
   }, {
     name: 'Vegetta',
     power: 1000
-  }]
+  }];
+
+  onNewCharacter(character: Character): void {
+    this.characters.push(character);
+
+  }
+
+  onDeletedCharacter(index: number): void {
+    this.characters.splice(index, 1)
+
+  }
 
 }
