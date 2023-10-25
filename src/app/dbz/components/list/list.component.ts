@@ -14,11 +14,11 @@ export class ListComponent {
   }]
 
   @Output()
-  public onDeleted: EventEmitter<number> = new EventEmitter();
+  public onDeleted: EventEmitter<string> = new EventEmitter();
 
-  onDeletedCharacter(index: number): void {
+  onDeletedCharacter(id: string): void {
     //TODO: Emitir el ID
-    this.onDeleted.emit(index)
+    this.onDeleted.emit(id)
 
   }
 }
